@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 
 interface CardProps {
   name: string;
@@ -85,8 +86,15 @@ const Card = ({
                   item.startsWith("https://t.co") ? (
                   ""
                 ) : (
-                  <span key={key} className="text-sm">
-                    {item}{" "}
+                  <span key={key}>
+                    {/*If item contains a \n then replace it with <br />*/}
+                    {item.split("\n").map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        {index !== item.split("\n").length - 1 && <br />}{" "}
+                        {/* Add <br /> except for the last line */}
+                      </React.Fragment>
+                    ))}
                   </span>
                 )
               );
