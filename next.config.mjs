@@ -7,12 +7,16 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: 'flowbite.s3.amazonaws.com',
+        hostname: "flowbite.s3.amazonaws.com",
       },
       {
         protocol: "https",
         hostname: "pbs.twimg.com",
-      }
+      },
+      {
+        protocol: "https",
+        hostname: "video.twimg.com",
+      },
     ],
   },
 };

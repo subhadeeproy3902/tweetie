@@ -11,6 +11,8 @@
   "dependencies": {
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.25",
+    "html-to-image": "^1.11.11",
+    "html2canvas": "^1.4.1",
     "lucide": "^0.365.0",
     "lucide-react": "^0.365.0",
     "mini-svg-data-uri": "^1.4.4",

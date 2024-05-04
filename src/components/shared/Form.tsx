@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import Card from "./Card";
 
@@ -8,6 +8,7 @@ const Form = () => {
   const accessKey = process.env.NEXT_PUBLIC_ACCESS_KEY as string;
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any | null>(null);
+  const [newCard, setNewCard] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,6 +32,7 @@ const Form = () => {
     console.log(data);
     setResult(data);
     setLoading(false);
+    setNewCard(true);
   };
 
   return (
@@ -54,19 +56,20 @@ const Form = () => {
         </button>
       </form>
 
-      {result?.tweet_id ? (
+      {result?.tweet_id && !loading ? (
         <Card
           name={result?.user?.name}
           username={result?.user?.username}
           text={result?.text}
           creation_date={result?.creation_date}
           media_url={result?.media_url}
-          video_url={result?.video_url}
           profile_pic_url={result?.user?.profile_pic_url}
           favorite_count={result?.favorite_count}
           retweet_count={result?.retweet_count}
           reply_count={result?.reply_count}
           views={result?.views}
+          newCard={newCard}
+          setNewCard={setNewCard}
         />
       ): result && <p className="mt-12 text-gray-400 font-medium text-xl tracking-wide z-50">Invalid Link</p>}
     </>
