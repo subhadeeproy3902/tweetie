@@ -31,3 +31,25 @@ body {
     text-wrap: balance;
   }
 }
+
+.hover-container {
+  position: relative;
+ }
+ 
+ .download-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #22cfff17;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+ }
+ 
+ .hover-container:hover .download-button {
+  display: block;
+ }
