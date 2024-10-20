@@ -43,6 +43,7 @@ export default function FlickeringGrid({
       if (!ctx) return "rgba(255, 0, 0,";
       ctx.fillStyle = color;
       ctx.fillRect(0, 0, 1, 1);
+      // @ts-ignore
       const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
       return `rgba(${r}, ${g}, ${b},`;
     };
