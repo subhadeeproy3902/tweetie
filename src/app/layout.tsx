@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://i.postimg.cc/63ZfYZwG/529shots-so.webp",
+        url: "https://i.postimg.cc/cJvbqgRR/357-1x-shots-so.webp",
         width: 1200,
         height: 630,
         alt: "SnapSite",
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={inter.className}>{children}</body>
     </html>
   );
