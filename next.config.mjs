@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /*compiler: {
+  compiler: {
     removeConsole: true,
-  }*/
+  },
   images: {
     remotePatterns: [
       {
