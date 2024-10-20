@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className="w-full relative">
       <FlickeringGrid
-        squareSize={8}
-        gridGap={10}
+        squareSize={4}
+        gridGap={6}
         color="#00ddff"
         maxOpacity={0.1}
         flickerChance={1}
