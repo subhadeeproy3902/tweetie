@@ -109,8 +109,8 @@ const Card = ({
           ref={cardRef}
         >
           <div className="flex space-x-4 items-center">
-            <Image
-              alt="@xeven"
+            <img
+              alt=""
               loading="lazy"
               width={500}
               height={500}
@@ -173,7 +173,7 @@ const Card = ({
                         : ""
                     }
                   >
-                    <Image
+                    <img
                       alt={`Image ${index + 1}`}
                       loading="lazy"
                       width={1000}
